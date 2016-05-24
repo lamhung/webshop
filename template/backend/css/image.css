@@ -1,0 +1,51 @@
+/*=========
+	image
+==========*/
+#image_up {
+ 	clear:both;
+}
+.btn_submit {
+	
+	
+}
+.wrapper_image {
+	padding: 0 10px 0 10px;
+	width: 200px;
+	height: 230px;
+	text-align: center;
+	float: left;
+	position:relative;
+}
+.img {
+	width: 100%;
+	height:200px;
+	margin-top: 10px;
+	border: 1px solid #CCC;
+}
+.img:hover {
+	border: 1px solid #F00;
+}
+.img img {
+	margin: 5px 5px 0 5px;
+	width: 85%;
+	height:190px;
+	
+}
+.ac_img {
+width:85%;
+clear:both;
+position:absolute;
+bottom:0;
+}
+.button {
+	
+}
+.btn_submit {
+	border-radius:10px;
+	border:1px solid #000;
+	width:80px;
+	height:25px;
+}
+#images {
+	border:1px solid #CCC;
+}
