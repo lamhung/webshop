@@ -39,7 +39,7 @@
     
     <div class="act_list_content">
       <ul class="act_list">
-        <li><a href='http://thinhphat.local:8080/acp/product/'>
+          <li><a href='<?php echo base_url('admin/product');?>'>
           <p class="icons_list_32"></p>
           Danh sách</a></li>
         <li><a href=javascript:submitFormID('fm_product')>

@@ -33,8 +33,8 @@
 
                         <li><a href="<?php echo base_url('admin'); ?>"><p class="icons_welcome"></p>Xin chào <?php echo $user_login['fullname']; ?></a></li>
                         <li><a href="<?php echo base_url('admin/me'); ?>"><p class="icons_user_info"></p>Cập nhật thông tin cá nhân</a></li>
-                        <li><a href=javascript:change_language('vi')><p class="icons_vietnam"></p>Tiếng việt</a></li>
-                        <li><a href=javascript:change_language('en')><p class="icons_english"></p>English</a></li>
+                        <li><a href=javascript:change_language('vietnamese')><p class="icons_vietnam"></p>Tiếng việt</a></li>
+                        <li><a href=javascript:change_language('english')><p class="icons_english"></p>English</a></li>
                         <li><a href="<?php echo base_url('admin/logout'); ?>"><p class="icons_exit"></p>Thoát</a></li>
                     </ul><!--END NAV-top-->
                 </div><!--END WAP HEADER-->
@@ -95,8 +95,9 @@
 
             <div class="note">
                 <marquee behavior="scroll" align="left" scrollamount="4" >
-                    <img src="<?php echo base_url('template/backend/images/icons/news.png');?>" alt="" /><span>Lưu ý: Mã nguồn do công ty chúng tôi phát triển - Tuyệt đối</span> <p class="red">không xài mã nguồn mở ( joomla, wordpress... )</p> <span>- Quí khách có nhu cầu thêm chức năng vui lòng </span><p class="red">liên hệ : 0902 702 322</p>
+                    <img src="<?php echo base_url('template/backend/images/icons/news.png'); ?>" alt="" /><span>Lưu ý: Mã nguồn do công ty chúng tôi phát triển - Tuyệt đối</span> <p class="red">không xài mã nguồn mở ( joomla, wordpress... )</p> <span>- Quí khách có nhu cầu thêm chức năng vui lòng </span><p class="red">liên hệ : 0902 702 322</p>
                 </marquee>
             </div><!--END NOTE-->	
 
             <!-- ///////////////////////////////////////////////// BEGIN MODUEL ///////////////////////////////////////////////////////////////////////--><div class="main">
+

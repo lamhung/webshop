@@ -76,7 +76,8 @@
 				'detail' => '',
 				'price' => '',
 				'image' => '',
-				'product_category_id' => 0
+				'product_category_id' => 0,
+                                'highlight' => 0
 			);
 		}
 		

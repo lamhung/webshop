@@ -35,7 +35,7 @@
     <th width="15%"><?php echo $this->lang->line('product_name') ;?></th>
     <th width="15%"><?php echo $this->lang->line('product_image') ;?></th>
     <th width="10%"><?php echo $this->lang->line('product_description') ;?></th>
-    <th width="10%"><?php echo $this->lang->line('Price') ;?></th>
+    <th width="10%"><?php echo $this->lang->line('product_price') ;?></th>
     <th width="3%">Sửa</th>
     <th width="3%">Xóa</th>
   </tr>
@@ -80,7 +80,7 @@
     <li><a href='<?php echo base_url('admin/product/add')?>'>
       <p class='icons_add_32'></p>
       Thêm mới</a></li>
-    <li><a href=javascript:submitFormID('fm_list') onclick="return confirm('Xóa những sản phẩm được chọn?');">
+    <li><a href=javascript:submitFormID('fm_list') onclick="return confirm(LANG.delete_product);">
       <p class="icons_del_32"></p>
       Xóa hết</a></li>
   </ul>

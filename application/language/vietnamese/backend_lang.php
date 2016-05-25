@@ -1,4 +1,17 @@
 <?php
+//common
+        $lang['product'] = 'Sản Phẩm';
+        $lang['product_category'] = 'Danh Mục Sản Phẩm';
+        $lang['product_list'] = 'Danh Sách Sản Phẩm';
+        $lang['user'] = 'Thành Viên';
+        $lang['news'] = 'Tin Tức';
+        $lang['orders'] = 'Đặt Hàng';
+        $lang['logo'] = 'Logo';
+        $lang['logger'] = 'Lịch Sử Truy Cập';
+        
+        
+        
+        
 //Banner
 	$lang['banner_id'] = 'ID Banner';
 	$lang['banner_orig_name'] = 'Tên Hình Gốc';
@@ -42,13 +55,13 @@
 	$lang['news_user_id'] = 'User Id';
 	//product Category
         $lang['category_id'] = 'ID Product Category';
-	$lang['category_name'] = 'Tên';
+	$lang['category_name'] = 'Tên Danh Mục';
 	$lang['category_url'] = 'Url';
 	$lang['category_ordinal'] = 'Thứ Tự';
 	$lang['category_iamge'] = 'Hình';
 	//product
 	$lang['product_id'] = 'ID Product';
-	$lang['product_name'] = 'Tên';
+	$lang['product_name'] = 'Tên Sản Phẩm';
 	$lang['product_url'] = 'Url';
 	$lang['product_image'] = 'Hình';
 	$lang['product_raw_name'] = 'Raw Name';
@@ -57,6 +70,7 @@
 	$lang['product_detail'] = 'Chi Tiết';
 	$lang['product_price'] = 'Giá';
 	$lang['news_user_id'] = 'User Id';
+        $lang['delete_product'] = 'Bạn Muốn Xóa Sản Phẩm Này';
 	//User
 	$lang['user_id'] = 'ID User';
 	$lang['user_username'] = 'Tên Đăng Nhập';

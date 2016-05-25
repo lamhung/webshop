@@ -9,6 +9,10 @@ $route['product/(:any)-(:num)'] = 'fontend/product/product/detail/$1/$2';
 $route['home/single'] = 'fontend/single/single';
 
 //backend
+$route['admin/language'] = 'backend/home/home/change_language';
+$route['admin/select_all_language'] = 'backend/home/home/select_all_language';
+
+
 $route['admin'] = 'backend/home/home';
 $route['admin/product'] = 'backend/product/product';
 $route['admin/product/page'] = 'backend/product/product';
@@ -23,6 +27,7 @@ $route['admin/product/search/page/(:num)'] = 'backend/product/product/search';
 $route['admin/product/product_image'] = 'backend/product/product_image';
 $route['admin/product/product_image/delete/(:num)'] = 'backend/product/product_image/delete/$1';
 $route['admin/product_image/product_image_remove'] = 'backend/product/product_image/product_image_remove';
+
 
 $route['admin/product_category'] = 'backend/product_category/product_category';
 $route['admin/product_category/add'] = 'backend/product_category/product_category/add';

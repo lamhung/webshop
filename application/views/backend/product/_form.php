@@ -99,3 +99,9 @@
 </tr>
 </table>
 <script type='text/javascript'>CKEDITOR.replace('textarea_editor');</script> 
+<script>
+    $(document).ready(function(){
+      alert(LANG.delete_product);  
+    });
+    
+</script>

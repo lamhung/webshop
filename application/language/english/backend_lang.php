@@ -1,4 +1,13 @@
 <?php
+//common
+        $lang['product'] = 'Product';
+        $lang['product_category'] = 'Product Category';
+        $lang['product_list'] = 'Product List';
+        $lang['user'] = 'Users';
+        $lang['news'] = 'News';
+        $lang['orders'] = 'Orders';
+        $lang['logo'] = 'Logo';
+        $lang['logger'] = 'Logger';
 //Banner
 	$lang['banner_id'] = 'ID Banner';
 	$lang['banner_orig_name'] = 'Origin Name';
@@ -57,6 +66,7 @@
 	$lang['product_detail'] = 'Detail';
 	$lang['product_price'] = 'Price';
 	$lang['news_user_id'] = 'User Id';
+        $lang['delete_product'] = 'You Want Clear Products';
 	//User
 	$lang['user_id'] = 'ID User';
 	$lang['user_username'] = 'Username';
