@@ -52,7 +52,7 @@ class Order extends CI_Controller {
                             $post_order_detail = array(
                                 'order_id' => $id_order,
                                 'product_id' => $key,
-                                'quantity' => $value
+                                'soluong' => $value
                             );
                             $id_order_detail = $this->order_detail_model->addRowDetail($post_order_detail);
                         }

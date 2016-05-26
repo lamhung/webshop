@@ -60,6 +60,10 @@
                         <th><?php echo $this->lang->line('banner_image_type'); ?></th>
                         <td><?php echo $banner['image_type_']; ?></td>
                     </tr>
+                    <tr>
+                        <th><?php echo $this->lang->line('banner_position'); ?></th>
+                        <td><?php echo $position['name']; ?></td>
+                    </tr>
                 </table>
                 <div class="pages">
                     <div class="pagenav"> </div>

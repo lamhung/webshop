@@ -47,6 +47,7 @@ $lang['banner_clicks'] = 'Clicks';
 $lang['banner_posted_date'] = 'Posted Date';
 $lang['banner_expiration_date'] = 'Expiration Date';
 $lang['banner_image'] = 'Image';
+$lang['banner_position'] = 'Place';
 
 //Logger
 $lang['logger_id'] = 'ID Logger';
@@ -114,6 +115,8 @@ $lang['orders_create_at'] = 'Create At';
 $lang['orders_delivery_at'] = 'Delivery At';
 $lang['orders_status'] = 'Status';
 $lang['orders_user_id'] = 'User Id';
+$lang['orders_quantity_update'] = 'Number of Successful Updates';
+$lang['orders_quantity_null'] = 'Please enter the numbers';
 //order_detail
 $lang['order_detail_id'] = 'ID Order Detail';
 $lang['order_detail_order_id'] = 'Order Id';

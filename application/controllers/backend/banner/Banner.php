@@ -42,6 +42,7 @@ class Banner extends CI_Controller {
         $this->form_validation->set_message('required', '%s không được để trống!');
         $data = array('error' => '');
         $data['banner'] = $this->banner_model->defaultRow();
+        $data['positions'] = $this->position_model->getRows();
         if ($this->input->post('submitForm')) {
             if ($this->form_validation->run() == true) {
                 $config = array();
@@ -67,6 +68,7 @@ class Banner extends CI_Controller {
                             'company' => $this->input->post('company'),
                             'posted_date' => strtotime($posted_date),
                             'expiration_date' => strtotime($expiration_date),
+                            'position_place' => $this->input->post('position')
                         );
                         $id = $this->banner_model->addRow($post);
                         if ($id) {
@@ -92,8 +94,11 @@ class Banner extends CI_Controller {
             redirect(base_url('admin/banner'));
         }
 
-        $data = array('banner' => $this->banner_model->convertRow($result));
-
+        $data = array(
+            'banner' => $this->banner_model->convertRow($result),
+            'position' => $this->position_model->getRow($result['position_place'])   
+         );
+        
         $this->load->view('backend/layout/header');
         $this->load->view('backend/banner/show', $data);
         $this->load->view('backend/layout/footer');
@@ -106,7 +111,7 @@ class Banner extends CI_Controller {
         $this->form_validation->set_rules('expiration_date', 'Ngày Hết Hạn', 'required');
         $this->form_validation->set_message('required', '%s không được để trống!');
         $data = array('error' => '');
-
+        $data['positions'] = $this->position_model->getRows();
         $result = $this->banner_model->getRow($id);
         if (!$result) {
             redirect(base_url('admin/banner'));

@@ -325,7 +325,9 @@ class Product extends CI_Controller {
     }
 
     public function ajax_order_quantity_update() {
-
+        $quantity_update = $this->lang->line('orders_quantity_update');
+        $quantity = 'nháp so';
+      
         $html = "";
         if ($this->input->post('id') && $this->input->post('quantity')) {
 
@@ -338,7 +340,7 @@ class Product extends CI_Controller {
 
             $html = $this->getHtmlOrder();
         }
-        echo json_encode(array('success' => true, 'data' => $html));
+        echo json_encode(array('success' => true, 'data' => $html , 'quantity_update' => $quantity_update, 'quantity' => $quantity));
     }
 
     public function getHtmlOrder() {

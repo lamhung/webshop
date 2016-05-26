@@ -47,6 +47,7 @@ $lang['banner_clicks'] = 'Clicks';
 $lang['banner_posted_date'] = 'Ngày Đăng';
 $lang['banner_expiration_date'] = 'Ngày Hết Hạn';
 $lang['banner_image'] = 'Hình';
+$lang['banner_position'] = 'Vị Trí';
 //Logger
 $lang['logger_id'] = 'ID Logger';
 $lang['logger_user_id'] = 'User Id';
@@ -113,6 +114,8 @@ $lang['orders_create_at'] = 'Ngyaf Đặt Hàng';
 $lang['orders_delivery_at'] = 'Ngày Gia Hàng';
 $lang['orders_status'] = 'Trạng Thái';
 $lang['orders_user_id'] = 'User Id';
+$lang['orders_quantity_update'] = 'Đã Cập Nhật Số Lượng Thành Công !';
+$lang['orders_quantity_null'] = 'Vui Lòng Nhập Số Lượng';
 //order_detail
 $lang['order_detail_id'] = 'ID Order Detail';
 $lang['order_detail_order_id'] = 'Order Id';

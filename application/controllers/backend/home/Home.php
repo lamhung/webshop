@@ -24,8 +24,10 @@ class Home extends CI_Controller {
     }
     public function select_all_language()
     {
-        $lang = $this->lang->language;
-        echo json_encode($lang);
+        $key_lang = $this->input->post('key_lang');
+        $lang = $this->lang->line($key_lang);
+        //print_r($lang["".$key_lang.""]);exit;
+        echo json_encode(array( 'msg' => $lang));
     }
     
 }

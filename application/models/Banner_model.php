@@ -78,11 +78,13 @@ class Banner_model extends CI_Model {
             'weblink' => '',
             'company' => '',
             'posted_date' => '',
-            'expiration_date' => ''
+            'expiration_date' => '',
+            'position_place' => ''
         );
     }
 
     function getBannerFromHomeTop($current_time = NULL) {
+        $this->db->where('position_place','top');
         $this->db->where('expiration_date > '.$current_time);
         $this->db->limit(4,0);
         $query = $this->db->get('banner');
@@ -92,7 +94,8 @@ class Banner_model extends CI_Model {
     }
     function getBannerFromHomeUnder($current_time = NULL) {
         $this->db->where('expiration_date > '.$current_time);
-        $this->db->limit(3,3);
+        $this->db->where('position_place','bottom');
+        $this->db->limit(3,0);
         $query = $this->db->get('banner');
         $result = $query->result_array();
         //echo $this->db->last_query();exit;

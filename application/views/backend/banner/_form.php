@@ -54,6 +54,23 @@
       	<?php echo "<span class='form_error'>".$error."</span>";?> 
       </td>
     </tr>
+    <tr>
+      <th>Vị Trí</th>
+     
+      <td>
+          <select class="select" name="position">
+              <option>Vui Lọng Chọn Vị Trí</option>
+              <?php
+                foreach($positions as $position)
+                {
+              ?>
+              <option value="<?php echo $position['place'];?>" <?php echo set_select('position',$position['place'],$banner['position_place'] == $position['place'])?>><?php echo $position['name'];?></option>
+              <?php
+                }
+              ?>
+          </select>
+      </td>
+    </tr>
   </table>
   <input type="hidden" name="submitForm" value="submitForm" />
 </form>

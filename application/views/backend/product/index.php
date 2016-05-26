@@ -53,7 +53,7 @@
     <td><?php echo $product['description'];?></td>
     <td><?php echo $product['price'];?></td>
     <td><a href="<?php echo base_url('admin/product/edit')?>/<?php echo $product['id'];?>" class="icons_edit_16"><?php echo $this->lang->line('edit'); ?></a></td>
-    <td><a href="<?php echo base_url('admin/product/delete')?>/<?php echo $product['id'];?>" onclick="return confirm(LANG.delete_product);" class="icons_del_16"></a></td>
+    <td><a href="<?php echo base_url('admin/product/delete')?>/<?php echo $product['id'];?>" onclick="return confirm('<?php echo $this->lang->line('delete_product');?>');" class="icons_del_16"></a></td>
   </tr>
   <?php
     }
@@ -80,7 +80,7 @@
     <li><a href='<?php echo base_url('admin/product/add')?>'>
       <p class='icons_add_32'></p>
       <?php echo $this->lang->line('add_new'); ?></a></li>
-    <li><a href=javascript:submitFormID('fm_list') onclick="return confirm(LANG.delete_product);">
+    <li><a href=javascript:submitFormID('fm_list') onclick="return confirm();">
       <p class="icons_del_32"></p>
       <?php echo $this->lang->line('delete_all'); ?></a></li>
   </ul>
@@ -89,9 +89,3 @@
 </div>
 <!--END ACT LIST CONTENT--><!--END MAIN--> 
 </div>
-<script>
-    $(document).ready(function(){
-        alert(LANG.delete_product);
-    });
-    
-</script>

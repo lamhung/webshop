@@ -49,7 +49,7 @@
                     <td><?php echo $product['name'];?></td>
                     <td>Hình Ảnh</td>
                     <td><?php echo $product['price'];?></td>
-                    <td><input name="quantity" type="number" min="1" value="<?php echo $product['quantity'];?>" style='width:30px;' onkeyup="ajax_order_quantity_update(<?php echo $product['id'];?>, this.value)" /></td>
+                    <td><input name="quantity" type="number" min="1" value="<?php echo $product['soluong'];?>" style='width:30px;' onkeyup="ajax_order_quantity_update(<?php echo $product['id'];?>, this.value)" /></td>
                     <td><a href="javascript:ajax_order_remove(<?php echo $product['id'];?>)">Xóa</a></td>
               	</tr>
               <?php
@@ -156,19 +156,23 @@ function ajax_order_remove(id)
 
 function ajax_order_quantity_update(id,quantity)
 {
+    
 	var reg = new RegExp('^[0-9]+$');
 	
 	if(reg.test(quantity) == false)
 	{
-		alert('Vui lòng nhập số !');
-		return false;
+            select_language('orders_quantity_null');
+            return false;
 	}
 	$.ajax({
 		type :'POST',
 		url : 'http://webshop.local/admin/product/ajax_order_quantity_update',
 		data : {id : id , quantity : quantity },
 		success : function(respone){
-			alert('Đã cập nhật số lượng thành công!');
+                    var LANG = JSON.parse(respone);
+			alert(LANG.quantity_update);
+                        //console.log(LANG);
+                        
 		}
 	});
 }
@@ -177,6 +181,8 @@ function ajax_order_quantity_update(id,quantity)
     $( "#datepicker" ).datepicker({
 			dateFormat: "dd/mm/yy"
 		});
+     
+     
 	
 		
   });
