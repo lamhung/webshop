@@ -38,15 +38,18 @@
         <section class="slider grid">
           <div class="flexslider">
             <ul class="slides">
+              <?php
+                foreach($banners as $banner)
+                {
+              ?>
               <li>
                 <h4>-30%</h4>
-                <img src="<?php echo base_url('template/fontend/images/b1.png');?>" alt=""> </li>
-              <li>
-                <h4>-25%</h4>
-                <img src="<?php echo base_url('template/fontend/images/b2.png');?>" alt=""> </li>
-              <li>
-                <h4>-32%</h4>
-                <img src="<?php echo base_url('template/fontend/images/b3.png');?>" alt=""> </li>
+                <img src="<?php echo base_url('upload/banner/'.$banner['file_name']);?>" alt="">
+              </li>
+              <?php  
+                }
+              ?>
+              
             </ul>
           </div>
         </section>
@@ -148,8 +151,12 @@
       <section class="slider grid">
         <div class="flexslider trend-slider">
           <ul class="slides">
+          <?php
+            foreach($banners_under as $banner_under)
+            {
+          ?>
             <li>
-              <div class="col-md-5 trend-left"> <img src="<?php echo base_url('template/fontend/images/t1.png');?>" alt=""/> </div>
+              <div class="col-md-5 trend-left"> <img src="<?php echo base_url('upload/banner/'.$banner_under['file_name']);?>" alt=""/> </div>
               <div class="col-md-7 trend-right">
                 <h4>TOP 10 TRENDS <span>FOR YOU</span></h4>
                 <h5>Flat 20% OFF</h5>
@@ -157,33 +164,9 @@
               </div>
               <div class="clearfix"></div>
             </li>
-            <li>
-              <div class="col-md-5 trend-left"> <img src="<?php echo base_url('template/fontend/images/t2.png');?>" alt=""/> </div>
-              <div class="col-md-7 trend-right">
-                <h4>TOP 10 TRENDS <span>FOR YOU</span></h4>
-                <h5>Flat 20% OFF</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus, justo ac volutpat vestibulum, dolor massa pharetra nunc, nec facilisis lectus nulla a tortor. Duis ultrices nunc a nisi malesuada suscipit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam eu bibendum felis. Sed viverra dapibus tincidunt.</p>
-              </div>
-              <div class="clearfix"></div>
-            </li>
-            <li>
-              <div class="col-md-5 trend-left"> <img src="<?php echo base_url('template/fontend/images/t3.png');?>" alt=""/> </div>
-              <div class="col-md-7 trend-right">
-                <h4>TOP 10 TRENDS <span>FOR YOU</span></h4>
-                <h5>Flat 20% OFF</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus, justo ac volutpat vestibulum, dolor massa pharetra nunc, nec facilisis lectus nulla a tortor. Duis ultrices nunc a nisi malesuada suscipit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam eu bibendum felis. Sed viverra dapibus tincidunt.</p>
-              </div>
-              <div class="clearfix"></div>
-            </li>
-            <li>
-              <div class="col-md-5 trend-left"> <img src="<?php echo base_url('template/fontend/images/t4.png');?>" alt=""/> </div>
-              <div class="col-md-7 trend-right">
-                <h4>TOP 10 TRENDS <span>FOR YOU</span></h4>
-                <h5>Flat 20% OFF</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus, justo ac volutpat vestibulum, dolor massa pharetra nunc, nec facilisis lectus nulla a tortor. Duis ultrices nunc a nisi malesuada suscipit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam eu bibendum felis. Sed viverra dapibus tincidunt.</p>
-              </div>
-              <div class="clearfix"></div>
-            </li>
+          <?php
+            }
+          ?>
           </ul>
         </div>
       </section>

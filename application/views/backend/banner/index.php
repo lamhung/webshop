@@ -8,10 +8,10 @@
   <ul class="act_list">
     <li><a href='<?php echo base_url('admin/banner/add')?>'>
       <p class='icons_add_32'></p>
-      Thêm mới</a></li>
+      <?php echo $this->lang->line('add_new');?></a></li>
     <li><a href=javascript:submitFormID('fm_list') onclick="return confirm('Xóa những banner được chọn?');">
       <p class="icons_del_32"></p>
-      Xóa hết</a></li>
+      <?php echo $this->lang->line('delete_all');?></a></li>
   </ul>
   <!--END ACT LIST--> 
   
@@ -32,13 +32,13 @@
   <tr>
     <th width="2%"><input type="checkbox" class="check-all" /></th>
     <th width="2%">STT</th>
-    <th width="30%">Tên banner</th>
-    <th width="15%">Website</th>
-    <th width="15%">Công ty</th>
-    <th width="8%">Ngày Đăng</th>
-     <th width="8%">Ngày Hết Hạn</th>
-    <th width="5%">Sửa</th>
-    <th width="5%">Xóa</th>
+    <th width="30%"><?php echo $this->lang->line('banner_orig_name');?></th>
+    <th width="15%"><?php echo $this->lang->line('banner_weblink');?></th>
+    <th width="15%"><?php echo $this->lang->line('banner_company');?></th>
+    <th width="8%"><?php echo $this->lang->line('banner_posted_date');?></th>
+     <th width="8%"><?php echo $this->lang->line('banner_expiration_date');?></th>
+    <th width="5%"><?php echo $this->lang->line('edit');?></th>
+    <th width="5%"><?php echo $this->lang->line('delete');?></th>
   </tr>
   
   <?php
@@ -77,10 +77,10 @@
   <ul class="act_list">
     <li><a href='<?php echo base_url('admin/banner/add')?>'>
       <p class='icons_add_32'></p>
-      Thêm mới</a></li>
+      <?php echo $this->lang->line('add_new');?></a></li>
     <li><a href=javascript:submitFormID('fm_list') onclick="return confirm('Xóa những banner được chọn?');">
       <p class="icons_del_32"></p>
-      Xóa hết</a></li>
+      <?php echo $this->lang->line('delete_all');?></a></li>
   </ul>
   <!--END ACT LIST--> 
   

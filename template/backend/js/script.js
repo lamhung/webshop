@@ -10,12 +10,16 @@ $(document).ready(function(){
        type : 'POST',
        url : 'http://webshop.local/admin/select_all_language',
        success : function (respone){
-          var LANG = JSON.parse(respone);
+           var LANG = JSON.parse(respone);
           console.log(LANG);
        }
-   }); 
+   });
 });
-
+/*var LANG = {
+    delete_product : 'test',
+    test2 : 'test2'
+};
+console.log(LANG);*/
 
 function change_language(lang)
 {

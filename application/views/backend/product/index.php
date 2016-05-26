@@ -8,10 +8,10 @@
   <ul class="act_list">
     <li><a href='<?php echo base_url('admin/product/add')?>'>
       <p class='icons_add_32'></p>
-      Thêm mới</a></li>
+      <?php echo $this->lang->line('add_new'); ?></a></li>
     <li><a href=javascript:submitFormID('fm_list') onclick="return confirm('Xóa những sản phẩm được chọn?');">
       <p class="icons_del_32"></p>
-      Xóa hết</a></li>
+      <?php echo $this->lang->line('delete_all'); ?></a></li>
   </ul>
   <!--END ACT LIST--> 
   
@@ -20,7 +20,7 @@
 
 <div class="main_content">
 <div class="pages">
-    <h1 class="title_main"><span class="icons_list_32"></span>Sản Phẩm</h1>
+    <h1 class="title_main"><span class="icons_list_32"></span><?php echo $this->lang->line('product');?></h1>
   <div class="pagenav" style="margin-top:15px;"> </div>
   <!--END PAGE NAV--> 
   
@@ -36,8 +36,8 @@
     <th width="15%"><?php echo $this->lang->line('product_image') ;?></th>
     <th width="10%"><?php echo $this->lang->line('product_description') ;?></th>
     <th width="10%"><?php echo $this->lang->line('product_price') ;?></th>
-    <th width="3%">Sửa</th>
-    <th width="3%">Xóa</th>
+    <th width="3%"><?php echo $this->lang->line('edit'); ?></th>
+    <th width="3%"><?php echo $this->lang->line('delete'); ?></th>
   </tr>
   <?php
   if(count($products) > 0)
@@ -52,8 +52,8 @@
     <td><?php echo "<img src='".base_url('upload/product/'.$product['image'])."' width='200'>" ;?></td>
     <td><?php echo $product['description'];?></td>
     <td><?php echo $product['price'];?></td>
-    <td><a href="<?php echo base_url('admin/product/edit')?>/<?php echo $product['id'];?>" class="icons_edit_16">Sửa</a></td>
-    <td><a href="<?php echo base_url('admin/product/delete')?>/<?php echo $product['id'];?>" onclick="return confirm('Bạn muốn xóa sản phẩm này');" class="icons_del_16"></a></td>
+    <td><a href="<?php echo base_url('admin/product/edit')?>/<?php echo $product['id'];?>" class="icons_edit_16"><?php echo $this->lang->line('edit'); ?></a></td>
+    <td><a href="<?php echo base_url('admin/product/delete')?>/<?php echo $product['id'];?>" onclick="return confirm(LANG.delete_product);" class="icons_del_16"></a></td>
   </tr>
   <?php
     }
@@ -79,13 +79,19 @@
   <ul class="act_list">
     <li><a href='<?php echo base_url('admin/product/add')?>'>
       <p class='icons_add_32'></p>
-      Thêm mới</a></li>
+      <?php echo $this->lang->line('add_new'); ?></a></li>
     <li><a href=javascript:submitFormID('fm_list') onclick="return confirm(LANG.delete_product);">
       <p class="icons_del_32"></p>
-      Xóa hết</a></li>
+      <?php echo $this->lang->line('delete_all'); ?></a></li>
   </ul>
   <!--END ACT LIST--> 
   
 </div>
 <!--END ACT LIST CONTENT--><!--END MAIN--> 
-
+</div>
+<script>
+    $(document).ready(function(){
+        alert(LANG.delete_product);
+    });
+    
+</script>

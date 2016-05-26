@@ -6,10 +6,10 @@
       <ul class="act_list">
         <li><a href='<?php echo  base_url('admin/banner');?>'>
           <p class="icons_list_32"></p>
-          Danh sách</a></li>
+          <?php echo $this->lang->line('list');?></a></li>
         <li><a href=javascript:submitFormID('fm_banner')>
           <p class="icons_save_32"></p>
-          Lưu</a></li>
+          <?php echo $this->lang->line('add');?></a></li>
       </ul>
       <!--END ACT LIST--> 
       
@@ -18,7 +18,7 @@
     
     <div class="main_content">
       <div class="pages">
-        <h1 class="title_main"><span class="icons_list_32"></span>Thêm banner</h1>
+        <h1 class="title_main"><span class="icons_list_32"></span><?php echo $this->lang->line('banner_add');?></h1>
         <div class="pagenav" style="margin-top:15px;"> </div>
         <!--END PAGE NAV--> 
         
@@ -41,10 +41,10 @@
       <ul class="act_list">
         <li><a href='<?php echo base_url('admin/banner');?>'>
           <p class="icons_list_32"></p>
-          Danh sách</a></li>
+          <?php echo $this->lang->line('list');?></a></li>
         <li><a href=javascript:submitFormID('fm_banner')>
           <p class="icons_save_32"></p>
-          Lưu</a></li>
+          <?php echo $this->lang->line('add');?></a></li>
       </ul>
       <!--END ACT LIST--> 
       
