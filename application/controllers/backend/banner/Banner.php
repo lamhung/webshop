@@ -11,7 +11,6 @@ class Banner extends CI_Controller {
         $this->load->library('upload');
         $this->load->library('form_validation');
         $this->load->library('pagination');
-        $this->load->model('logger_model');
         $this->lang->load('backend', $this->session->userdata('language'));
     }
 

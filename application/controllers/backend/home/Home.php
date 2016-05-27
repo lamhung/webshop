@@ -11,7 +11,6 @@ class Home extends CI_Controller {
         $this->lang->load('backend', $this->session->userdata('language'));
     }
     public function index() {
-        $this->user_model->checkLogin();
         $this->load->view('backend/layout/header');
         $this->load->view('backend/home/index');
         $this->load->view('backend/layout/footer');

@@ -1,13 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$route['default_controller'] = 'fontend/home/home';
+$route['default_controller'] = 'index/index';
 $route['home'] = 'fontend/home/home';
 //fontend
 $route['category/(:any)'] = 'fontend/product/product/index/$1';
 $route['product/(:any)-(:num)'] = 'fontend/product/product/detail/$1/$2';
 $route['home/single'] = 'fontend/single/single';
 
+$route['home/orders'] = 'fontend/orders/orders';
+$route['home/orders/create/(:num)'] = 'fontend/orders/orders/createOrders/$1';
 //backend
 $route['admin/language'] = 'backend/home/home/change_language';
 $route['admin/select_all_language'] = 'backend/home/home/select_all_language';

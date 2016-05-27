@@ -78,12 +78,16 @@ $(window).load(function() {
           <li><a href="#" class="green"></a></li>
           <li><a href="#" class="pink"></a></li>
         </ul>
+        <form method="post">
         <div class="clearfix"> </div>
         <div class="quantity">
           <p class="qty"> Qty : </p>
-          <input min="1" type="number" value="1" class="item_quantity">
+          
+            <input min="1" type="number" name="quantity" value="1" class="item_quantity">
+          
         </div>
-        <div class="btn_form"> <a href="#" class="add-cart item_add">ADD TO CART</a> </div>
+        </form>
+        <div class="btn_form"> <a href="<?php echo base_url('home/orders/create/'.$product['id']);?>" class="add-cart item_add">ADD TO CART</a> </div>
       </div>
       <div class="clearfix"> </div>
     </div>

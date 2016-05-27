@@ -16,8 +16,9 @@ class Home extends CI_Controller {
         $data['products_highlight'] = $result_highlight;
         $data['banners'] = $result_bannerTop;
         $data['banners_under'] = $result_bannerUnder;
+        $title = array('title_page' => 'webshop.local');
         //print_r($result_banner);exit;
-        $this->load->view('fontend/layout/header');
+        $this->load->view('fontend/layout/header',$title);
         $this->load->view('fontend/home/index', $data);
         $this->load->view('fontend/layout/footer');
     }
