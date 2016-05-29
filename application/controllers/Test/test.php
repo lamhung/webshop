@@ -8,5 +8,6 @@
 		function index()
 		{
 			$this->load->view('test/test');
+                        
 		}
 	}

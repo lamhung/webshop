@@ -10,7 +10,6 @@ class Index extends CI_Controller {
     {
         $this->index_model->index();
     }
-    
     public function test()
     {
         echo '123';
