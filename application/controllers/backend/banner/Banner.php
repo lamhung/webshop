@@ -34,6 +34,9 @@ class Banner extends CI_Controller {
     }
 
     function add() {
+        //echo $this->router->fetch_class().'<br>'; // class = controller
+        //echo $this->router->fetch_method();exit;
+        
         $this->form_validation->set_rules('weblink', 'Website', 'required');
         $this->form_validation->set_rules('company', 'Công Ty', 'required');
         $this->form_validation->set_rules('posted_date', 'Ngày Đăng', 'required');
@@ -82,6 +85,8 @@ class Banner extends CI_Controller {
                 }
             }
         }
+        
+        
         $this->load->view('backend/layout/header');
         $this->load->view('backend/banner/add', $data);
         $this->load->view('backend/layout/footer');
